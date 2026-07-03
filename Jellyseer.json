@@ -1,0 +1,229 @@
+GNU nano 8.4                                 settings.json                                           
+{
+ "clientId": "a7ff54b5-08f2-4a8e-b800-97228b4e5e17",
+ "vapidPrivate": "jLYVbfIsUOKIKSve9k_aNijmv7v8ZImgtLI7mncIFBQ",
+ "vapidPublic": "BFyiRN2pOWAtPFklaSQG_wNe9v_bOGx2UbLJvY3ryEfTs3sWNX0GFNAMx4N9dO5xAdQyyT1UzZ8UHijE04nBo>
+ "main": {
+  "apiKey": "MTc3MjQyMTg0NjAxOTdhNzcwOWVjLWEwY2QtNGUzZS1iYzJlLTU4OTYwN2YxNDIxMg==",
+  "applicationTitle": "Jellyseerr",
+  "applicationUrl": "",
+  "cacheImages": false,
+  "defaultPermissions": 32,
+  "defaultQuotas": {
+   "movie": {},
+   "tv": {}
+  },
+  "hideAvailable": false,
+  "hideBlacklisted": false,
+  "localLogin": true,
+  "mediaServerLogin": true,
+  "newPlexLogin": true,
+  "discoverRegion": "",
+  "streamingRegion": "",
+  "originalLanguage": "",
+  "blacklistedTags": "",
+  "blacklistedTagsLimit": 50,
+  "mediaServerType": 2,
+  "partialRequestsEnabled": true,
+  "enableSpecialEpisodes": false,
+  "locale": "en",
+  "youtubeUrl": ""
+ },
+ "plex": {
+  "name": "",
+  "ip": "",
+  "port": 32400,
+  "useSsl": false,
+  "libraries": []
+ },
+ "jellyfin": {
+  "name": "jellyfin",
+  "ip": "192.168.110.14",
+  "port": 8096,
+  "useSsl": false,
+  "urlBase": "",
+  "externalHostname": "",
+  "jellyfinForgotPasswordUrl": "",
+  "libraries": [
+   {
+    "id": "f137a2dd21bbc1b99aa5c0f6bf02a805",
+    "name": "Movies",
+    "enabled": true,
+    "type": "movie"
+   }
+  ],
+  "serverId": "432c67ed68c84d22a9224bce88c5fe86",
+  "apiKey": "f9a343474a174de188eb42f54bb5a262"
+ },
+ "tautulli": {},
+ "radarr": [
+  {
+   "name": "Radarr",
+   "hostname": "192.168.110.13",
+   "port": 7878,
+   "apiKey": "c73cab3881f84ac9a92ba20d35916687",
+   "useSsl": false,
+   "baseUrl": "",
+   "activeProfileId": 1,
+   "activeProfileName": "Any",
+   "activeDirectory": "/mnt/laogai/media/movies",
+   "is4k": false,
+   "minimumAvailability": "released",
+   "tags": [],
+   "isDefault": false,
+   "syncEnabled": false,
+   "preventSearch": false,
+   "tagRequests": false,
+   "id": 0
+  }
+ ],
+ "sonarr": [],
+ "public": {
+  "initialized": true
+ },
+ "notifications": {
+  "agents": {
+   "email": {
+    "enabled": false,
+    "options": {
+     "userEmailRequired": false,
+     "emailFrom": "",
+     "smtpHost": "",
+     "smtpPort": 587,
+     "secure": false,
+     "ignoreTls": false,
+     "requireTls": false,
+     "allowSelfSigned": false,
+     "senderName": "Jellyseerr"
+    }
+   },
+   "discord": {
+    "enabled": false,
+    "types": 0,
+    "options": {
+     "webhookUrl": "",
+     "webhookRoleId": "",
+     "enableMentions": true
+    }
+   },
+   "slack": {
+    "enabled": false,
+    "types": 0,
+    "options": {
+     "webhookUrl": ""
+    }
+   },
+   "telegram": {
+    "enabled": false,
+    "types": 0,
+    "options": {
+     "botAPI": "",
+     "chatId": "",
+     "messageThreadId": "",
+     "sendSilently": false
+    }
+   },
+   "pushbullet": {
+    "enabled": false,
+    "types": 0,
+    "options": {
+     "accessToken": ""
+    }
+   },
+   "pushover": {
+    "enabled": false,
+    "types": 0,
+    "options": {
+     "accessToken": "",
+     "userToken": "",
+     "sound": ""
+    }
+   },
+   "webhook": {
+    "enabled": false,
+    "types": 0,
+    "options": {
+     "webhookUrl": "",
+     "jsonPayload": "IntcbiAgXCJub3RpZmljYXRpb25fdHlwZVwiOiBcInt7bm90aWZpY2F0aW9uX3R5cGV9fVwiLFxuICBcI>
+    }
+   },
+   "webpush": {
+    "enabled": false,
+    "options": {}
+   },
+   "gotify": {
+    "enabled": false,
+    "types": 0,
+    "options": {
+     "url": "",
+     "token": "",
+     "priority": 0
+    }
+   },
+   "ntfy": {
+    "enabled": false,
+    "types": 0,
+    "options": {
+     "url": "",
+     "topic": ""
+    }
+   }
+  }
+ },
+ "jobs": {
+  "plex-recently-added-scan": {
+   "schedule": "0 */5 * * * *"
+  },
+  "plex-full-scan": {
+   "schedule": "0 0 3 * * *"
+  },
+  "plex-watchlist-sync": {
+   "schedule": "0 */3 * * * *"
+  },
+  "plex-refresh-token": {
+   "schedule": "0 0 5 * * *"
+  },
+  "radarr-scan": {
+   "schedule": "0 0 4 * * *"
+  },
+  "sonarr-scan": {
+   "schedule": "0 30 4 * * *"
+  },
+  "availability-sync": {
+   "schedule": "0 0 5 * * *"
+  },
+  "download-sync": {
+   "schedule": "0 * * * * *"
+  },
+  "download-sync-reset": {
+   "schedule": "0 0 1 * * *"
+  },
+  "jellyfin-recently-added-scan": {
+   "schedule": "0 */5 * * * *"
+  },
+  "jellyfin-full-scan": {
+   "schedule": "0 0 3 * * *"
+  },
+  "image-cache-cleanup": {
+   "schedule": "0 0 5 * * *"
+  },
+  "process-blacklisted-tags": {
+   "schedule": "0 30 1 */7 * *"
+  }
+ },
+ "network": {
+  "csrfProtection": false,
+  "forceIpv4First": false,
+  "trustProxy": false,
+  "proxy": {
+    "enabled": false,
+   "hostname": "",
+   "port": 8080,
+   "useSsl": false,
+   "user": "",
+   "password": "",
+   "bypassFilter": "",
+   "bypassLocalAddresses": true
+  }
+ }
+}
