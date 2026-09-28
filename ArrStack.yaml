@@ -75,24 +75,6 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
-  nzbget:
-    image: lscr.io/linuxserver/nzbget:latest
-    container_name: nzbget
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=${TZ}
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - ./nzbget:/config
-      - /data:/data
-    depends_on:
-      gluetun:
-        condition: service_healthy
-        restart: true
-    restart: unless-stopped
-    network_mode: service:gluetun
-
   prowlarr:
     image: lscr.io/linuxserver/prowlarr:latest
     container_name: prowlarr
@@ -162,7 +144,7 @@ services:
       - 6767:6767
     networks:
       servarrnetwork:
-        ipv4_address: 172.39.0.6
+        ipv4_address: 172.39.0.5
 
   ytdl-sub:
     image: ghcr.io/jmbannon/ytdl-sub:latest
@@ -177,7 +159,7 @@ services:
       - /data/youtube:/youtube
     networks:
       servarrnetwork:
-        ipv4_address: 172.39.0.8
+        ipv4_address: 172.39.0.6
     restart: unless-stopped
 
   jellyseerr:
@@ -194,5 +176,5 @@ services:
       - 5055:5055
     networks:
       servarrnetwork:
-        ipv4_address: 172.39.0.9
+        ipv4_address: 172.39.0.7
     restart: unless-stopped
